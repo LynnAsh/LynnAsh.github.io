@@ -1,0 +1,187 @@
+/*Header Styles*/
+#header {
+    background-color: rgba(127, 107, 125, 0.75);
+    opacity: 99%;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+
+    margin: 0 30px 0 30px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+    font-family: Consolas, monaco, monospace;
+}
+.title {
+    color: #f8b9ff;
+    margin: auto;
+    float: left;
+
+    padding-top: 10px
+}
+#buttonDiv {
+    position: absolute;
+    right: 0;
+
+    padding-top: 5px;
+}
+button {
+    margin-left: px;
+
+    font-size: 18px;
+    background-color: rgb(206, 136, 213);
+    padding: 10px 10px 10px 10px;
+    border-radius: 8px;
+
+    cursor: pointer;
+    font-family: Consolas, monaco, monospace;
+}
+button:hover {
+    background-color: #facfff;
+}
+.content {
+    position: relative;
+    height: 80px;
+    width: 1040px;
+    margin: auto;
+    padding-top: 30px;
+}
+
+
+
+/*MainDiv Style*/
+.mainDivGen {
+    background-color: rgb(173, 118, 173, .3);
+    backdrop-filter: blur(10px);
+
+    position: relative;
+    padding: 30px 20px 30px 20px;
+
+    font-family: Consolas, monaco, monospace;
+    border-radius: 8px;
+
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 15px;
+}
+#mainDiv {
+    height: 600px;
+}
+#projectsDiv {
+    height: 870px;
+}
+
+
+
+/*Lefthand Bar MainDiv Styles*/
+#myStuff {
+    border: dotted;
+    border-color: #aa71a5;
+    width: 350px;
+    height: 550px;
+
+    float: left;
+}
+#pfp {
+    width: 300px;
+    margin: 20px 1px 20px 26px;
+}
+#personalStuff {
+    padding-left: 30px;
+}
+.personalHeader {
+    margin: auto;
+}
+
+
+
+/*Righthand Resume Styles*/
+#resume {
+    float: inline-start;
+    padding-left: 20px;
+    width: 620px;
+}
+.about {
+    margin: 60px 0 10px 20px;
+
+    font-size: 18px
+}
+.sections {
+    margin-bottom: 20px;
+    color: #f8b9ff;
+}
+
+
+
+#plasticdeath {
+    width: 200px;
+    float: right;
+    margin-left: 10px;
+}
+#kayak {
+    width: 300px;
+    float: left;
+    margin-right: 20px;
+}
+.svdImgs {
+    width: 360px;
+    margin-bottom: 20px;
+}
+#svdContainer {
+    display: grid;
+    float: left;
+
+    margin: 0 20px 0 20px;
+}
+.graphs {
+    width: 400px;
+    margin-bottom: 20px;
+}
+#graphContainer {
+    display: grid;
+    float: right;
+
+    margin: 0 20px 0 20px;
+}
+
+
+
+/*Text Styles*/
+a:link {
+    color: #fdc0ff;
+    font-size: 18px;
+}
+a:visited{
+    color: #fdc0ff;
+    font-size: 18px;
+}
+li {
+    color: #e266ff;
+    margin: 8px 0 0 -10px;
+}
+p {
+    color: #fdc0ff;
+    margin: 10px 0 15px 10px;
+    font-size: 18px;
+}
+.space {
+    margin-bottom: 40px;
+}
+
+
+
+/*Background Video Style*/
+#bgVideo {
+    position: fixed;
+
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+img {
+    border: double;
+    border-color: #c867cb;
+}

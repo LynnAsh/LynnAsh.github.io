@@ -190,9 +190,6 @@ button:hover {
     cursor: pointer;
 }
 .slider::-moz-range-thumb {
-    -moz-appearance: none;
-    appearance: none;
-
     width: 20px;
     height: 12px;
     background: white;

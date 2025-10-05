@@ -6,6 +6,7 @@ const paint = document.getElementById("paintBtn");
 const eraser = document.getElementById("eraseBtn");
 const clear = document.getElementById("clearBtn");
 
+const colorContainer = document.getElementById("colorContainer");
 const redBtn = document.getElementById('redBtn');
 const pinkBtn = document.getElementById('pinkBtn');
 const yellowBtn = document.getElementById('yellowBtn');
@@ -16,19 +17,20 @@ const blackBtn = document.getElementById('blackBtn');
 
 let painting = false;
 let coord = {x:0, y:0};
+let colorCur = 'black';
 
 window.onload = () => {
     resize();
     ctx.lineWidth = parseInt(slider.value);
-
-    canvas.addEventListener('mousedown', startPaint);
-    canvas.addEventListener('mouseup', stopPaint);
-    canvas.addEventListener('mousemove', draw);
-
+    ctx.lineCap = 'round';
 };
 
-paint.addEventListener('click', () => changeColor('black'));
-eraser.addEventListener('click', () => changeColor('white'));
+canvas.addEventListener('mousedown', startPaint);
+canvas.addEventListener('mouseup', stopPaint);
+canvas.addEventListener('mousemove', draw);
+
+paint.addEventListener('click', () => {changeColor(colorCur); showColors();});
+eraser.addEventListener('click', () => {changeColor('white'); hideColors();});
 redBtn.addEventListener('click', () => changeColor('red'));
 pinkBtn.addEventListener('click', () => changeColor('hotpink'));
 yellowBtn.addEventListener('click', () => changeColor('yellow'));
@@ -37,8 +39,20 @@ blueBtn.addEventListener('click', () => changeColor('dodgerblue'));
 brownBtn.addEventListener('click', () => changeColor('saddlebrown'));
 blackBtn.addEventListener('click', () => changeColor('black'));
 function changeColor(color) {
+    if (color != 'white') {
+        colorCur = color;
+    }
     ctx.strokeStyle = color;
 }
+
+
+function hideColors() {
+    colorContainer.style.display = 'none';
+}
+function showColors() {
+    colorContainer.style.display = 'ruby';
+}
+
 
 clear.addEventListener('click', function() {
     ctx.clearRect(0, 0, 980, 500);
@@ -58,11 +72,9 @@ function getPos(e) {
 }
 
 
-function startPaint(e) {
+function startPaint() {
     painting = true;
-    getPos(e);
     ctx.beginPath();
-    ctx.moveTo(coord.x, coord.y);
 }
 function stopPaint() {
     painting = false;
@@ -72,10 +84,7 @@ function stopPaint() {
 function draw(e) {
     if (!painting) return;
 
-    ctx.lineCap = 'round';
-
     getPos(e);
-
     ctx.lineTo(coord.x, coord.y);
     ctx.stroke();
 }

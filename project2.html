@@ -2,9 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>Project 2 TBA</title>
+        <title>Paint!</title>
         <link rel="stylesheet" href="styles.css" />
-        <script src="script.js"></script>
     </head>
 
     <body>
@@ -14,22 +13,41 @@
 
         <div id="header">
             <div class="content">
-                <h1 class="title">Project 2</h1>
+                <h1 class="title">Project 2: Paint!</h1>
 
                 <div id="buttonDiv">
                     <button onclick="location.href='index.html'">Home</button>
                     <button onclick="location.href='aboutme.html'">About Me</button>
                     <button onclick="location.href='projects.html'">Personal Projects</button>
-                    <button onclick="location.href='project2.html'">Project 2</button>
+                    <button onclick="location.href='project2.html'">Paint!</button>
                     <button onclick="location.href='project3.html'">Project 3</button>
                 </div>
             </div>
 
         </div>
 
-        <div id="mainDiv" class="mainDivGen">
-            <p>to be filled...</p>
-        </div>
+        <div id="paintDiv" class="mainDivGen">
+            <canvas id="paintCanvas"></canvas>
 
+
+            <div id="controlsPanel">
+                <button id="paintBtn">Paint</button>
+                <button id="eraseBtn">Eraser</button>
+                <button id="clearBtn">Clear</button>
+            </div>
+
+            <div id="optionsPanel">
+                <input type="range" min="1" max="20" value="5" class="slider" id="paintSlider">
+
+                <button id="redBtn" style="background-color: red;"></button>
+                <button id="pinkBtn" style="background-color: hotpink;"></button>
+                <button id="yellowBtn" style="background-color: yellow;"></button>
+                <button id="greenBtn" style="background-color: forestgreen;"></button>
+                <button id="blueBtn" style="background-color: dodgerblue;"></button>
+                <button id="brownBtn" style="background-color: saddlebrown;"></button>
+                <button id="blackBtn" style="background-color: black;"></button>
+            </div>
+        </div>
+        <script src="script.js"></script>
     </body>
 </html>

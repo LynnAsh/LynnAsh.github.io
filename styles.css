@@ -166,6 +166,7 @@ button:hover {
 }
 #optionsPanel {
     padding: 10px;
+    display: ruby;
 }
 
 
